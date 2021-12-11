@@ -70,7 +70,7 @@ bag_of_words = cv.fit_transform(cleaned_data).toarray()
 
 #import model
 # load the model from disk
-model = pickle.load(open("finalized_model.pkl", 'rb'))
+model = pickle.load(open("result/finalized_model.pkl", 'rb'))
 
 
 y_pred = model.predict(bag_of_words)
