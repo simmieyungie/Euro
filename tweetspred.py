@@ -72,7 +72,6 @@ bag_of_words = cv.fit_transform(cleaned_data).toarray()
 # load the model from disk
 model = pickle.load(open("result/finalized_model.pkl", 'rb'))
 
-
 y_pred = model.predict(bag_of_words)
 
 tweets_df1["Sentiment"] = y_pred
