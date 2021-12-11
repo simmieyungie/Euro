@@ -83,4 +83,4 @@ from datetime import datetime
 date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 
 #write to csv
-tweets_df1.to_csv(date +".csv")
+tweets_df1.to_csv("result/" + date +".csv")
