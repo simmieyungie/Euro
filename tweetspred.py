@@ -9,8 +9,7 @@ Original file is located at
 
 # import the pandas library to read the dataset
 import pandas as pd
-!pip install tweepy
-!pip install snscrape
+
 
 # importing libraries and packages
 import snscrape.modules.twitter as sntwitter
