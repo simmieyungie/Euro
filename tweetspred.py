@@ -77,8 +77,8 @@ y_pred = model.predict(bag_of_words)
 tweets_df1["Sentiment"] = y_pred
 
 #save file with datename
-from datetime import datetime
-date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
+#from datetime import datetime
+#date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 
 #write to csv
-tweets_df1.to_csv("result/" + date +".csv")
+tweets_df1.to_csv("result/data.csv", mode = 'a')
