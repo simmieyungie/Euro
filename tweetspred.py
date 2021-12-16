@@ -19,7 +19,7 @@ import pandas
 tweets_list1 = []
 
 # Using TwitterSearchScraper to scrape data and append tweets to list
-for i,tweet in enumerate(sntwitter.TwitterSearchScraper('from:jack').get_items()): #declare a username 
+for i,tweet in enumerate(sntwitter.TwitterSearchScraper('EURO2020Final OR EuroFinal OR ENGITA + since:2021-07-11 until:2021-07-13').get_items()): #declare a username 
     if i>1000: #number of tweets you want to scrape
         break
     tweets_list1.append([tweet.date, tweet.id, tweet.content]) #declare the attributes to be returned
@@ -81,4 +81,4 @@ tweets_df1["Sentiment"] = y_pred
 #date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 
 #write to csv
-tweets_df1.to_csv("result/data.csv", mode = 'a')
+tweets_df1.to_csv("result/data.csv", mode = 'a', index = False)
